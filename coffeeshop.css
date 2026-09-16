@@ -540,3 +540,107 @@ button:hover{
 transform:translateY(-3px);
 background:#A67C52;
 }
+
+/* ================= HAMBURGER (mobile only, hidden on desktop) ================= */
+.hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    gap:5px;
+    cursor:pointer;
+    z-index:1001;
+}
+.hamburger span{
+    width:26px;
+    height:3px;
+    background:#5C3A00;
+    border-radius:2px;
+    transition:.3s;
+}
+
+/* ================= MOBILE RESPONSIVE (everything below only applies at 900px and under; laptop/desktop view is untouched) ================= */
+@media(max-width:900px){
+    .navbar{
+        width:92%;
+        padding:16px 25px;
+    }
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:calc(100% + 15px);
+        left:0;
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        background:#F8F5F0;
+        padding:25px 0;
+        border-radius:20px;
+        box-shadow:0 8px 30px rgba(0,0,0,.15);
+    }
+    .nav-links.active{
+        display:flex;
+    }
+    .hamburger{
+        display:flex;
+    }
+    .phrase{
+        font-size:44px;
+    }
+    .phrase-para{
+        font-size:17px;
+    }
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .logo{
+        font-size:28px;
+    }
+    .navbar{
+        padding:14px 20px;
+    }
+    .phrase{
+        font-size:32px;
+    }
+    .phrase-para{
+        font-size:15px;
+        padding:0 10px;
+    }
+    .menu{
+        padding:70px 6%;
+    }
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .choice{
+        width:92%;
+        margin:70px auto;
+    }
+    .choose{
+        font-size:28px;
+    }
+    .about-us,.reviews,.contact{
+        padding:70px 6%;
+    }
+    .about-cafe h2,.review-heading h2,.contact-title h2{
+        font-size:30px;
+    }
+    .right h3{
+        font-size:26px;
+    }
+    .contact-info h3{
+        font-size:26px;
+    }
+}
+
+@media(max-width:400px){
+    .phrase{
+        font-size:26px;
+    }
+    .choose{
+        font-size:24px;
+    }
+}
